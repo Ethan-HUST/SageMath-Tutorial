@@ -1,0 +1,65 @@
+\section{Hướng dẫn khắc phục lỗi khi cài đặt SageMath}
+
+Việc cài đặt SageMath có thể gặp khó khăn do phụ thuộc hệ điều hành hoặc môi trường. Một số gợi ý khắc phục:
+
+\begin{itemize}
+	\item \textbf{Trên Windows:}
+	\begin{itemize}
+		\item Dùng phiên bản SageMath cho Windows (bản `.exe` hoặc WSL).
+		\item Nếu cài qua WSL, cần đảm bảo đã bật tính năng WSL2 và cài Ubuntu đầy đủ.
+		\item Nên sử dụng môi trường `conda` để dễ quản lý gói và tránh xung đột.
+	\end{itemize}
+	\item \textbf{Trên Linux/macOS:}
+	\begin{itemize}
+		\item Dùng bản `.tar.bz2` và biên dịch lại nếu cần tối ưu cho máy cá nhân.
+		\item Cài thiếu thư viện hệ thống? Kiểm tra lỗi và cài thêm các gói `libreadline-dev`, `build-essential`, `python3-dev`,...
+	\end{itemize}
+	\item \textbf{Lỗi “Permission Denied”:} Chạy với quyền `sudo` hoặc chỉnh lại quyền thư mục.
+	\item \textbf{Lỗi thiếu Python / sai phiên bản:} SageMath đi kèm Python riêng – không nên can thiệp nếu không có kinh nghiệm.
+\end{itemize}
+
+\section{Các lỗi thường gặp và cách xử lý}
+
+\begin{itemize}
+	\item \textbf{Không khởi động được SageMath:}
+	\begin{itemize}
+		\item Kiểm tra biến môi trường `PATH`, đảm bảo đường dẫn SageMath chính xác.
+		\item Trên Windows, thử khởi động lại máy hoặc dùng dòng lệnh `sage -n jupyter`.
+	\end{itemize}
+	
+	\item \textbf{Không vẽ được đồ thị / đồ thị không hiển thị:}
+	\begin{itemize}
+		\item Thiếu thư viện đồ họa (như `matplotlib`)? Cài lại bằng: \texttt{sage -pip install matplotlib}.
+		\item Nếu dùng WSL, cần cài thêm `x11`, `VcXsrv`, hoặc dùng WSLg (trên Windows 11).
+	\end{itemize}
+	
+	\item \textbf{Cài gói Python bị lỗi trong SageMath:}
+	\begin{itemize}
+		\item Dùng đúng lệnh \texttt{sage -pip install <ten\_goi>} thay vì pip ngoài.
+	\end{itemize}
+	
+	\item \textbf{Lỗi tương thích phiên bản:}
+	\begin{itemize}
+		\item Kiểm tra trang chủ SageMath xem phiên bản bạn cài đã tương thích với hệ điều hành chưa.
+	\end{itemize}
+\end{itemize}
+
+\section{Tài nguyên học tập và tham khảo về SageMath}
+
+\begin{itemize}
+	\item \textbf{Trang chính thức:} \url{https://www.sagemath.org}
+	\item \textbf{Tài liệu hướng dẫn:} \url{https://doc.sagemath.org}
+	\item \textbf{Notebook thử online:} \url{https://sagecell.sagemath.org}
+	\item \textbf{Jupyter Notebook:} SageMath tương thích tốt với Jupyter, hỗ trợ viết tài liệu, bài giảng tương tác.
+	\item \textbf{Diễn đàn thảo luận:} \url{https://ask.sagemath.org}
+	\item \textbf{Tài liệu tiếng Việt (cộng đồng):}
+	\begin{itemize}
+		\item GitHub: \url{https://github.com/sagemath}
+		\item Một số trường đại học có chia sẻ giáo trình nội bộ: hãy tìm với từ khóa \texttt{“SageMath site:hust.edu.vn”}.
+	\end{itemize}
+	\item \textbf{Sách tham khảo:}
+	\begin{itemize}
+		\item \textit{Sage for Undergraduates} – Gregory Bard
+		\item \textit{Computational Mathematics with SageMath} – Paul Zimmermann et al.
+	\end{itemize}
+\end{itemize}

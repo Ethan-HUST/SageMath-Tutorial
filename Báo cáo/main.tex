@@ -1,0 +1,120 @@
+\documentclass[12pt, a4paper, twoside]{report} % Báo cáo dạng report, cỡ chữ 13pt
+
+% Gói hỗ trợ tiếng Việt và mã Unicode
+\usepackage[utf8]{inputenc}
+\usepackage[T5]{fontenc}  % Font tiếng Việt
+\usepackage[vietnamese]{babel}
+\usepackage{indentfirst}
+\setcounter{secnumdepth}{3}
+\usepackage{float}  % Thêm dòng này nếu chưa có
+\floatplacement{figure}{H}  % Đặt hình ảnh luôn ở vị trí chính xác
+\floatplacement{table}{H}   % Đặt bảng luôn ở vị trí chính xác
+
+% Cấu hình lề: trên 2cm, dưới 2cm, trái 3.5cm, phải 2.5cm, đối xứng trang chẵn lẻ
+\usepackage[a4paper,top=2cm,bottom=2cm,left=3.5cm,right=2.5cm,headsep=1cm,footskip=1cm]{geometry}
+
+% Gói hỗ trợ Toán học
+\usepackage{amsmath, amssymb, amsthm, mathtools}
+\usepackage{tabularx}
+% Gói hiển thị mã nguồn
+\usepackage{listings}
+\usepackage{xcolor}
+\lstset{
+	language=Python,                % Ngôn ngữ code
+	basicstyle=\ttfamily\footnotesize, % Font code
+	keywordstyle=\color{blue},      % Màu keyword
+	commentstyle=\color{green!50!black}, % Màu comment
+	stringstyle=\color{red},        % Màu chuỗi
+	breaklines=true,                % Xuống dòng nếu quá dài
+	frame=single,                   % Viền khung
+	numbers=left,                   % Đánh số dòng
+	numberstyle=\tiny\color{gray},  % Màu số dòng
+}
+
+% Gói hỗ trợ chèn hình ảnh
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+
+% Gói hỗ trợ liên kết
+\usepackage{hyperref}
+\usepackage{pgfplots}
+\usepackage{tikz-3dplot}
+% Gói hỗ trợ tài liệu tham khảo
+\usepackage{cite}
+
+\DeclareMathOperator{\arccot}{arccot}
+
+\usepackage{setspace}
+\usepackage{anyfontsize} % Cho phép cỡ chữ tùy ý
+
+\AtBeginDocument{%
+	\fontsize{13pt}{16pt}\selectfont
+}
+\usepackage{setspace}
+\onehalfspacing  % Mặc định là 1.5 dòng – ta sẽ thay bằng custom
+
+% Tuỳ chỉnh độ giãn dòng cụ thể
+\setstretch{1.25}
+
+\begin{document}
+	
+	% Trang bìa
+	\input{coverPage.tex}
+	\setstretch{1.25}
+	%Nhận xét từ giảng viên hướng dẫn
+	\input{instructor_reviews}
+	
+	% Lời nói đầu
+	\input{preface.tex}
+	
+	% Mục lục
+	\tableofcontents
+	\listoffigures
+	\listoftables
+	
+	% Chương 1: Giới thiệu
+	\chapter{Giới thiệu}
+	\input{chapters/chapter1.tex}
+	
+	% Chương 2: Tổng quan về SageMath
+	\chapter{Tổng quan về SageMath}
+	\input{chapters/chapter2.tex}
+	
+	% Chương 3: Các tính năng cốt lõi của SageMath
+	\chapter{Các tính năng cốt lõi của SageMath}
+	\input{chapters/chapter3.tex}
+	
+	% Chương 4: Các tính năng nâng cao và tùy chỉnh
+	\chapter{Các tính năng nâng cao và tùy chỉnh}
+	\input{chapters/chapter4.tex}
+	
+	% Chương 5: Ứng dụng trong các học phần Toán đại cương
+	\chapter{Ứng dụng trong các học phần Toán đại cương}
+	\input{chapters/chapter5.tex}
+	
+	% Chương 7: Kết luận và hướng phát triển
+	\chapter{Kết luận và hướng phát triển}
+	\input{chapters/chapter7.tex}
+	
+	% Lời cảm ơn
+	\input{thanks.tex}
+	
+	% Phụ lục A
+	\appendix	
+	\chapter{Tài liệu đính kèm}
+	\input{chapters/appendixA.tex}
+	
+	% Phụ lục B
+	\chapter{Câu hỏi thường gặp}
+	\input{chapters/appendixB.tex}
+	
+	% Phụ lục C
+	\chapter{Tài liệu tham khảo}
+	\input{chapters/appendixC.tex}
+	
+	\bibliographystyle{plain}
+
+	
+\end{document}

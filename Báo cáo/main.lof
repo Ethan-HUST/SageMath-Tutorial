@@ -1,0 +1,35 @@
+\babel@toc {vietnamese}{}\relax 
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Logo phần mềm SageMath phiên bản 10.5}}{12}{figure.caption.11}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces William A. Stein đang nói chuyện về Sage tại REU Toán học năm 2011 tại Đại học Washington}}{12}{figure.caption.12}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Giao diện SageMath Notebook trên nền tảng trực tuyến CoCalc}}{15}{figure.caption.17}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Giao diện nền tảng Binder}}{16}{figure.caption.18}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Giao diện trang web Sage Cell}}{17}{figure.caption.19}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Đồ thị hàm số $y=x^2$ trên đoạn $\left [-2,2\right ]$}}{23}{figure.caption.22}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Đồ thị 2D của hàm số \(\sin (x)\) trên đoạn \( [0, 2\pi ] \)}}{35}{figure.caption.23}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Đồ thị với cả hai hàm \(\sin (x)\) và \(\cos (x)\) trên cùng một biểu đồ}}{36}{figure.caption.24}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Một bề mặt 3D của hàm \( \sin (x^2 + y^2) \) trong khoảng \([-3, 3]\) cho cả \(x\) và \(y\)}}{36}{figure.caption.25}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Đồ thị của \( e^x \) với màu xanh lá, thêm tiêu đề cùng với nhãn cho các trục}}{37}{figure.caption.26}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Đồ thị của một đường tròn đơn vị trong mặt phẳng \( Oxy \)}}{38}{figure.caption.27}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Vẽ đồ thị $y=sin(x)$ trên đoạn $\left [0,2\pi \right ]$ với matplotlib}}{48}{figure.caption.28}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Đồ thị được tạo bằng networkx}}{49}{figure.caption.29}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Đồ thị hàm $f(x,y)=sin(x^2+y^2)$ trên $\left [-2,2\right ]*\left [-2,2\right ]$}}{56}{figure.caption.30}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Miền $D: 0 \le x \le 1, \ 0 \le y \le x$}}{57}{figure.caption.31}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Miền D được vẽ bằng phương pháp tọa độ cực}}{58}{figure.caption.32}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Mô phỏng miền tính tích phân bội ba}}{58}{figure.caption.33}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Miền cần tính diện tích $D: 0 \le x \le 1, \ 0 \le y \le \sqrt {1 - x^2}$}}{59}{figure.caption.34}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Mô phỏng miền vật thể giới hạn bởi mặt phẳng \( z = x^2 + y^2 \) phía dưới và mặt phẳng \( z = 4 \) phía trên.}}{60}{figure.caption.35}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Miền $C: y = x^2, 0 \le x \le 1$}}{61}{figure.caption.36}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Miền $C$ là đường tròn đơn vị}}{61}{figure.caption.37}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Mặt phẳng $z = 1 - x - y$ trên miền tam giác $x + y \leq 1$}}{62}{figure.caption.38}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Đồ thị mô phỏng đạo hàm theo hướng của \( f(x, y) = x^2y \) tại \( A(1, 2) \) theo hướng \( \vec {v} = (3, 4) \)}}{64}{figure.caption.39}%
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Đồ thị minh họa khai triển chuỗi Fourier của $f(x)=x$ trên $\left [-\pi ,\pi \right ]$}}{66}{figure.caption.40}%
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Biểu đồ phân phối nhị thức với $(n,p)=(10,0.5)$}}{72}{figure.caption.41}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }

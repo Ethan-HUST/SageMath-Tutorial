@@ -1,0 +1,253 @@
+\section{Lập trình trong SageMath bằng Python}
+	
+SageMath được xây dựng dựa trên Python, cho phép người dùng sử dụng đầy đủ các cấu trúc điều khiển, hàm, lớp và thư viện của ngôn ngữ này. Điều này giúp mở rộng khả năng xử lý và tạo ra các chương trình toán học linh hoạt.
+
+\subsection{Câu lệnh điều kiện và vòng lặp}
+Người dùng có thể sử dụng các cấu trúc điều kiện như \texttt{if-else} và vòng lặp như \texttt{for}, \texttt{while} trong SageMath.
+
+\begin{lstlisting}[basicstyle=\ttfamily\small]
+	# Kiem tra so nguyen to bang cau lenh if
+	sage: def is_prime_check(n):
+	....:     if is_prime(n):
+	....:         return "La so nguyen to"
+	....:     else:
+	....:         return "Khong la so nguyen to"
+	
+	sage: is_prime_check(17)
+	'La so nguyen to'
+	
+	# Duyet cac so nguyen to nho hon 20
+	sage: for i in range(1, 20):
+	....:     if is_prime(i):
+	....:         print(i)
+	2
+	3
+	5
+	7
+	11
+	13
+	17
+	19
+\end{lstlisting}
+
+\subsection{Định nghĩa và sử dụng hàm}
+Người dùng có thể định nghĩa hàm tùy chỉnh trong SageMath tương tự như trong Python.
+
+\begin{lstlisting}[basicstyle=\ttfamily\small]
+	# Ham tinh giai thua bang de quy
+	sage: def giaithua(n):
+	....:     if n == 0:
+	....:         return 1
+	....:     else:
+	....:         return n * giaithua(n - 1)
+	
+	sage: giaithua(5)
+	120
+\end{lstlisting}
+
+\subsection{Làm việc với danh sách và tập hợp}
+Các cấu trúc dữ liệu như danh sách, tập hợp, từ điển... đều có thể sử dụng trong SageMath để xử lý dữ liệu toán học linh hoạt.
+
+\begin{lstlisting}[basicstyle=\ttfamily\small]
+	# Tao danh sach cac binh phuong
+	sage: squares = [n^2 for n in range(1, 11)]
+	sage: squares
+	[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+	
+	# Tap hop cac uoc so cua 24
+	sage: divisors(24)
+	[1, 2, 3, 4, 6, 8, 12, 24]
+\end{lstlisting}
+
+\subsection{Sử dụng lambda và biểu thức hàm}
+Biểu thức lambda giúp định nghĩa hàm ngắn gọn và kết hợp với các hàm bậc cao như \texttt{map}, \texttt{filter}, \texttt{reduce}.
+
+\begin{lstlisting}[basicstyle=\ttfamily\small]
+	# Su dung lambda de tinh lap phuong
+	sage: lap_phuong = lambda x: x^3
+	sage: lap_phuong(4)
+	64
+	
+	# Loc cac so chia het cho 3
+	sage: list(filter(lambda x: x % 3 == 0, range(1, 20)))
+	[3, 6, 9, 12, 15, 18]
+\end{lstlisting}
+
+Như vậy, SageMath không chỉ là công cụ toán học mạnh mẽ mà còn là môi trường lập trình tiện lợi, linh hoạt với đầy đủ sức mạnh của Python.
+
+\section{SageMath trong tính toán khoa học}
+	
+SageMath không chỉ là công cụ tính toán toán học thuần túy mà còn được sử dụng rộng rãi trong tính toán khoa học (scientific computing), nhờ tích hợp với các thư viện nổi tiếng như NumPy, SciPy và matplotlib.
+
+\subsection{Sử dụng NumPy để xử lý mảng số liệu}
+
+SageMath hỗ trợ thư viện NumPy để thao tác với mảng và thực hiện các phép toán số học hiệu quả.
+
+\begin{lstlisting}[basicstyle=\ttfamily\small]
+	# Tao mang numpy va tinh tong
+	sage: import numpy as np
+	sage: a = np.array([1, 2, 3, 4])
+	sage: b = np.array([10, 20, 30, 40])
+	sage: a + b
+	array([11, 22, 33, 44])
+\end{lstlisting}
+
+\subsection{Sử dụng SciPy để giải bài toán khoa học}
+
+SciPy cung cấp nhiều công cụ để giải phương trình, tích phân, tối ưu hóa và các bài toán vật lý kỹ thuật.
+
+\begin{lstlisting}[basicstyle=\ttfamily\small]
+	# Tim nghiem gan dung cua phuong trinh
+	sage: from scipy.optimize import fsolve
+	sage: f = lambda x: x**3 - 1
+	sage: fsolve(f, 0.5)
+	array([1.])
+\end{lstlisting}
+
+\subsection{Vẽ đồ thị khoa học với matplotlib}
+
+SageMath có thể dùng matplotlib để tạo các biểu đồ trực quan hóa dữ liệu.
+
+\begin{lstlisting}[basicstyle=\ttfamily\small]
+	# Ve do thi ham sin(x)
+	sage: import matplotlib.pyplot as plt
+	sage: import numpy as np
+	sage: x = np.linspace(0, 2*np.pi, 100)
+	sage: y = np.sin(x)
+	sage: plt.plot(x, y)
+	sage: plt.title('Do thi sin(x)')
+	sage: plt.grid()
+	sage: plt.show()
+\end{lstlisting}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{images/4232}
+	\caption{Vẽ đồ thị $y=sin(x)$ trên đoạn $\left[0,2\pi\right]$ với matplotlib}
+	\label{fig:4232}
+\end{figure}
+
+
+Nhờ tích hợp tốt với các công cụ khoa học hiện đại, SageMath cho phép người dùng thực hiện các bài toán từ lý thuyết đến ứng dụng kỹ thuật một cách hiệu quả.
+
+\section{Mở rộng SageMath với thư viện bên ngoài}
+
+Một trong những điểm mạnh của SageMath là khả năng mở rộng thông qua các thư viện bên ngoài, đặc biệt là các thư viện của Python. Người dùng có thể dễ dàng cài đặt và sử dụng các gói bổ sung để tăng cường chức năng của SageMath.
+
+\subsection{Cài đặt thư viện bổ sung}
+
+Người dùng có thể cài đặt các thư viện Python bằng lệnh \texttt{pip} ngay trong SageMath:
+
+\begin{lstlisting}[basicstyle=\ttfamily\small]
+	# Cai thu vien sympy
+	sage: !pip install sympy
+\end{lstlisting}
+
+Sau khi cài đặt, ta có thể nhập và sử dụng ngay:
+
+\begin{lstlisting}[basicstyle=\ttfamily\small]
+	# Su dung sympy de rut gon bieu thuc
+	sage: import sympy as sp
+	sage: x = sp.Symbol('x')
+	sage: expr = (x**2 + 2*x + 1)/(x + 1)
+	sage: sp.simplify(expr)
+	x + 1
+\end{lstlisting}
+
+\subsection{Kết hợp SageMath với pandas để xử lý dữ liệu}
+
+Pandas là một thư viện mạnh để thao tác với dữ liệu dạng bảng.
+
+\begin{lstlisting}[basicstyle=\ttfamily\small]
+	# Doc file CSV va thong ke
+	sage: import pandas as pd
+	sage: data = pd.read_csv('du_lieu.csv')
+	sage: data.head()
+	sage: data.describe()
+\end{lstlisting}
+
+\subsection{Sử dụng thư viện tính toán nâng cao}
+
+Một số thư viện khác có thể dùng để xử lý các bài toán đặc biệt như:
+
+\begin{itemize}
+	\item \textbf{networkx} – phân tích đồ thị và mạng.
+	\item \textbf{scikit-learn} – học máy cơ bản.
+	\item \textbf{cvxpy} – tối ưu hóa lồi.
+\end{itemize}
+
+Ví dụ dùng \texttt{networkx} để tạo đồ thị:
+
+\begin{lstlisting}[basicstyle=\ttfamily\small]
+	# Tao do thi bang networkx
+	sage: import networkx as nx
+	sage: G = nx.Graph()
+	sage: G.add_edges_from([(1, 2), (2, 3), (3, 1)])
+	sage: nx.draw(G, with_labels=True)
+\end{lstlisting}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.45\linewidth]{images/423}
+	\caption{Đồ thị được tạo bằng networkx}
+	\label{fig:423}
+\end{figure}
+
+
+Khả năng mở rộng giúp SageMath trở thành nền tảng mở, thân thiện với nghiên cứu và giảng dạy hiện đại.
+
+\newpage
+\section{Kết nối SageMath với các phần mềm khác}
+
+SageMath có thể tích hợp với nhiều phần mềm và hệ thống khác để phục vụ các mục đích đa dạng như trình bày tài liệu, xử lý dữ liệu, và phát triển ứng dụng.
+
+\subsection{Sử dụng SageMath với \LaTeX{}}
+
+SageMath hỗ trợ tích hợp trực tiếp với \LaTeX{} thông qua gói \texttt{sagetex}. Gói này cho phép người dùng chèn mã SageMath vào file \LaTeX{} và tự động sinh kết quả.
+
+Ví dụ: file \texttt{main.tex} chứa đoạn sau:
+
+\begin{lstlisting}[basicstyle=\ttfamily\small]
+	\documentclass{article}
+	\usepackage{sagetex}
+	\begin{document}
+		Gia tri cua $f(x) = x^2 + 1$ tai $x = 3$ la \sage{3^2 + 1}.
+	\end{document}
+\end{lstlisting}
+
+Sau khi biên dịch bằng \texttt{pdflatex} và chạy mã Sage, kết quả sẽ tự động được chèn vào văn bản.
+
+\subsection{Kết nối với Jupyter Notebook}
+
+SageMath có thể chạy trong môi trường Jupyter Notebook – nơi cho phép người dùng viết mã, hiển thị công thức, hình ảnh và chú thích trong cùng một giao diện tương tác.
+
+\begin{lstlisting}[basicstyle=\ttfamily\small]
+	# Chay Sage trong Jupyter Notebook
+	$ sage -n jupyter
+\end{lstlisting}
+
+Người dùng có thể dễ dàng thao tác các biểu thức toán học, vẽ đồ thị và phân tích dữ liệu trực tiếp trong các ô (cell).
+
+\subsection{Tích hợp với Python IDE}
+
+Vì SageMath là một lớp bao ngoài của Python, ta có thể dùng SageMath trong các môi trường lập trình như VSCode hoặc PyCharm với một chút thiết lập. Điều này giúp phát triển các ứng dụng lớn và chuyên sâu hơn.
+
+\subsection{Giao tiếp với phần mềm toán học khác}
+
+SageMath còn có thể giao tiếp với các phần mềm khác như:
+
+\begin{itemize}
+	\item \textbf{R} – phân tích thống kê.
+	\item \textbf{Mathematica, Maple} – chuyển đổi định dạng.
+	\item \textbf{Maxima, GAP, Singular} – tích hợp trong nội bộ SageMath.
+\end{itemize}
+
+Ví dụ gọi Maxima trong Sage:
+
+\begin{lstlisting}[basicstyle=\ttfamily\small]
+	# Goi Maxima de rut gon bieu thuc
+	sage: maxima('(x^2 + 2*x + 1)/(x + 1)').ratsimp()
+	x + 1
+\end{lstlisting}
+
+Tính linh hoạt trong tích hợp giúp SageMath dễ dàng được đưa vào hệ sinh thái học thuật, nghiên cứu và công nghiệp.
+

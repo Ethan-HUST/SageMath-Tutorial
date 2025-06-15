@@ -1,0 +1,12 @@
+\babel@toc {vietnamese}{}\relax 
+\contentsline {chapter}{Lời nói đầu}{2}{chapter*.2}%
+\contentsline {chapter}{\numberline {1}Giới thiệu}{3}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Tổng quan về SageMath}{4}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Các tính năng cốt lõi của SageMath}{5}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Các tính năng nâng cao và tùy chỉnh}{6}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Ứng dụng trong các học phần Toán đại cương}{7}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Nghiên cứu tình huống và ví dụ thực tế}{8}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Kết luận và hướng phát triển}{9}{chapter.7}%
+\contentsline {chapter}{\numberline {A}Phụ lục A}{10}{appendix.A}%
+\contentsline {chapter}{\numberline {B}Tài liệu tham khảo}{11}{appendix.B}%
+\contentsline {chapter}{Tài liệu tham khảo}{11}{appendix.B}%
